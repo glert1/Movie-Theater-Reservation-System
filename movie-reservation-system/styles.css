@@ -1,0 +1,183 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FBF8DD;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #A34343;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar img {
+    height: 60px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.navbar h1 {
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px auto;
+    gap: 20px;
+}
+
+.left, .right, .center {
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.left, .right {
+    background-color: #C0D6E8;
+}
+
+.center {
+    background-color: #E9C874;
+}
+
+h2 {
+    text-align: center;
+    color: #A34343;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: #A34343;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #A34343;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #A34343;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #BF4F4F;
+}
+
+.seat {
+    width: 30px;
+    height: 30px;
+    margin: 1px 5px 5px 10px ; 
+    background-color: #C0D6E8;
+    border: 2px solid #A34343;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, transform 0.3s; 
+}
+
+.seat:hover {
+    transform: scale(1.1); 
+}
+
+.selected {
+    background-color: #A34343;
+    color: white;
+}
+
+.occupied {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+.reserved {
+    background-color: #BF4F4F; 
+    color: white;
+    cursor: not-allowed;
+}
+
+.hidden {
+    display: none;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; 
+    left: 50%;
+    margin-left: -70px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+#seating {
+    display: grid;
+    gap: 2px;
+    justify-content: center; 
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
+
+    .left, .right {
+        width: 25%;
+    }
+
+    .center {
+        width: 50%;
+    }
+}

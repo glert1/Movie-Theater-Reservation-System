@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Theater Reservation System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="pic/logo4.png" alt="Logo">
+        <h1>Movie Theater Reservation System</h1>
+    </div>
+    <div class="container">
+        <div class="left">
+            <h2>User Info</h2>
+            <form id="userForm">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br>
+                <label for="surname">Surname:</label><br>
+                <input type="text" id="surname" name="surname"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="phone">Phone:</label><br>
+                <input type="text" id="phone" name="phone"><br>
+                <label for="age">Age:</label><br>
+                <input type="number" id="age" name="age"><br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="center">
+            <h2>Select Seats</h2>
+            <div id="adminControls" class="hidden">
+                <label for="rows" style="margin-left: 25px;">Rows:</label >
+                <input type="number" id="rows" name="rows" min="1" ><br><br>
+                <label for="columns">Columns:</label>
+                <input type="number" id="columns" name="columns" min="1"><br>
+                <button id="setSeats">Set Seats</button>
+            </div>
+            <br>
+            <div id="userControls" class="hidden">
+                <div id="seating"></div>
+                <button id="confirmReservation">Confirm</button>
+            </div>
+        </div>
+        <div class="right hidden">
+            <h2>Reservation Info</h2>
+            <p>Name: <span id="resName"></span></p>
+            <p>Surname: <span id="resSurname"></span></p>
+            <p>Seats: <span id="resSeats">None</span></p>
+            <p>Total Price: $<span id="resPrice">0</span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
